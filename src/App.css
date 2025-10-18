@@ -1,5 +1,18 @@
+/*
+  src/App.css
+
+  Purpose:
+  - Component and layout styles for the app. It contains a max-width container (#root), logo
+    styles, simple animations, and utility classes used by the template.
+
+  How to adapt:
+  - #root sets a centered content column. Change max-width or padding to change layout width.
+  - Move component-specific styles into modules (e.g. Header.module.css) when components grow.
+  - Respect user preferences like prefers-reduced-motion for accessibility.
+*/
+
 #root {
-  max-width: 1280px;
+  max-width: 2880px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -11,13 +24,45 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container div {
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
+/*Must have both logo and react classes and effect only happens on hover.*/
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #244A00;
+  color: white;
+  text-align: center;
+}
+
+/* Simple spin animation (used by template logos). Remove if you prefer no motion. */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

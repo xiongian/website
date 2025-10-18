@@ -1,8 +1,27 @@
+/*
+  src/index.css
+
+  Purpose:
+  - Global styles for the site. This file sets base color, typography, and styles for common elements
+    such as body, headings, links and buttons.
+
+  Teaching notes (how to change safely):
+  - :root contains design tokens (colors, fonts). Change them to theme the whole site.
+  - Use media queries and prefers-color-scheme to provide light/dark variations.
+  - Keep component-specific styles in separate CSS modules or component files for scalability.
+
+  Exercises:
+  1) Move button styles into a CSS class (e.g. .btn) and update the Button component to use className.
+  2) Add CSS variables for primary/secondary colors and reference them in rules.
+  3) Add responsive rules for smaller screens.
+*/
+
 :root {
   font-family: system-ui, serif, Gentium-Plus, Avenir, Lato, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
+  /* color-scheme affects form controls and built-in UI in modern browsers */
   color-scheme: light dark;
   color: #ffffffde;
   background-color: #1A1000;
@@ -35,6 +54,10 @@ h1 {
   line-height: 1.1;
 }
 
+/*
+  Styling for the presentational <button> used in this project.
+  Prefer using semantic classes (e.g. .btn) for scalable styles.
+*/
 button {
   border-radius: 2px;
   border: 1px solid transparent;

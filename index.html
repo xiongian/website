@@ -1,3 +1,15 @@
+<!--
+  index.html
+
+  Purpose:
+  - The single HTML file used by Vite during development and included in the build.
+  - It contains the <div id="root"></div> mount point where React mounts the app.
+
+  How to modify safely:
+  - Add meta tags (description, theme-color) and link tags for fonts or icons here.
+  - Keep script type="module" src="/src/main.tsx" so Vite can load the app entry during dev.
+  - Avoid putting app markup here; keep it inside React components so HMR works properly.
+-->
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,7 +19,9 @@
     <title>Ian Xiong</title>
   </head>
   <body>
+    <!-- React mounts into this element. Do not remove. -->
     <div id="root"></div>
+    <!-- Vite will load the app entry module during development -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
