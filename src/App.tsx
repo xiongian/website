@@ -24,6 +24,7 @@
 */
 
 import "./App.css";
+import ianPhoto from "./assets/ianphoto.png";
 import type { ReactElement } from "react";
 
 // Small presentational Button component
@@ -106,11 +107,14 @@ function App(): ReactElement {
 
       <main>
         {/* Main site content goes here. Replace this with routes or sections as the site grows. */}
-        <h1>Ian's Website</h1>
 
         <div className="container">
-          <div>
-            <p>gurt why arent you centere bruahhhhhhhhh</p>
+          <div className="left-box">
+            <h2>hey, i'm</h2>
+            <h1>Ian Xiong!</h1>
+
+            <img src={ianPhoto} alt="Ian Xiong" />
+            <p>trying le cloche penché in québec city!</p>
           </div>
           <div>
             <p>I study systems design engineering at UW.</p>
