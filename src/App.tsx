@@ -75,7 +75,6 @@ function Footer() {
   return (
     <div>
       <p>2025 Ian Xiong</p>
-      <a href="https://www.linkedin.com/in/ian-xiong/">Linkedin!</a>
       <SocialLinkButton
         button_name="github"
         url="https://github.com/xiongian"
@@ -112,33 +111,22 @@ function App(): ReactElement {
           <div className="left-box">
             <h2>hey, i'm</h2>
             <h1>Ian Xiong!</h1>
-
             <img src={ianPhoto} alt="Ian Xiong" />
-            <p>trying le cloche penché in québec city!</p>
+            <p className="caption">trying <i>le clocher penché</i> in québec city!</p>
           </div>
-          <div>
-            <p>I study systems design engineering at UW.</p>
+          <div className="right-box">
+            <p className="textbox">I study <b>systems design engineering</b> @ UWaterloo and I love creating cool things.</p>
+            <br></br>
+            <p className="textbox">I’m currently developing <b>automation software</b> packages at Lumentum for telecommunications.</p>
+            <br></br>
+            <p className="textbox">I’m also spearheading a <b>6-bar linkage</b> roof-tilt for Waterloo’s solar EV team, Midnight Sun.</p>
+            <br></br>
+            <p className="textbox">Outside of creating, I’m an avid soccer player, write rap verses, and a self-acclaimed food connoisseur!</p>
+            <br></br>
           </div>
         </div>
 
-        <p>lyircal flow i spit bars poetry flow</p>
-        <section>
-          <h2>section </h2>
-        </section>
       </main>
-
-      {/* Footer */}
-      <div>
-        <h2>gurt</h2>
-      </div>
-
-      <div>
-        <h2>gurt</h2>
-      </div>
-
-      <div>
-        <h2>gurt</h2>
-      </div>
 
       <footer>
         <Footer />

@@ -34,7 +34,7 @@
 
 .container div {
   margin: 10px;
-  padding: 10px;
+  padding: 40px;
   padding-bottom: 0px;
   font-size: 30px;
   align-items: center;
@@ -45,8 +45,26 @@
   margin: 0;
   text-align: left;
   gap: 0.15rem;
+  max-width: 530;
 }
 
+.right-box {
+  margin: 0;
+  text-align: left;
+  gap: 0.15rem;
+  background-color: #D19F58;
+  max-width: 448px;
+  filter: drop-shadow(16px 16px 0px #244A00);
+}
+
+.caption {
+  padding: 10px 0px;
+  color: #D19F58;
+}
+
+.textbox {
+  color: #1A1000;
+}
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
@@ -56,17 +74,6 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-
-
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #244A00;
-  color: white;
-  text-align: center;
-}
 
 /* Simple spin animation (used by template logos). Remove if you prefer no motion. */
 @keyframes logo-spin {
