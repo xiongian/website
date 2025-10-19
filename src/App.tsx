@@ -25,7 +25,10 @@
 
 import "./App.css";
 import ianPhoto from "./assets/ianphoto.png";
-import type { ReactElement } from "react";
+import githubIcon from "./assets/github.png";
+import linkedinIcon from "./assets/linkedin.png";
+import twitterIcon from "./assets/twitter.png";
+import type { JSX, ReactElement } from "react";
 
 // Small presentational Button component
 // - Props: { button_name }
@@ -51,39 +54,31 @@ function Header() {
   );
 }
 
-function SocialLinkButton({
-  button_name,
-  url,
-}: {
-  button_name: string;
-  url: string;
-}) {
-  function handleClick() {
-    alert("leading you to social media!");
-  }
-
+function SocialLinkButton({ button_name, url,}: { button_name: string;  url: string; }) {
   return (
     <a href={url}>
-      <button onClick={handleClick}>{button_name}</button>
+      <img src={ button_name }></img>
     </a>
   );
 }
 
 // Footer showing simple contact buttons and a copyright
 // - How to improve: make the social buttons links (<a href="..."><button/></a>) or extract to a SocialLinks component
-function Footer() {
+function SocialLinks() {
   return (
     <div>
-      <p>2025 Ian Xiong</p>
       <SocialLinkButton
-        button_name="github"
+        button_name={githubIcon}
         url="https://github.com/xiongian"
       />
       <SocialLinkButton
-        button_name="linkedin"
+        button_name={linkedinIcon}
         url="https://www.linkedin.com/in/ian-xiong/"
       />
-      <SocialLinkButton button_name="Twitter" url="https://x.com/ianxiong_" />
+      <SocialLinkButton 
+        button_name={twitterIcon}
+        url="https://x.com/ianxiong_" 
+      />
     </div>
   );
 }
@@ -94,15 +89,9 @@ function Footer() {
 function App(): ReactElement {
   return (
     <>
-      {/* Site header */}
       <div>
         <Header />
       </div>
-
-      {/*
-        IMPORTANT: Don't put a <body> element here. The <body> must remain in index.html.
-        Keep your app's content inside divs, sections, header, main, footer, etc.
-      */}
 
       <main>
         {/* Main site content goes here. Replace this with routes or sections as the site grows. */}
@@ -112,24 +101,46 @@ function App(): ReactElement {
             <h2>hey, i'm</h2>
             <h1>Ian Xiong!</h1>
             <img src={ianPhoto} alt="Ian Xiong" />
-            <p className="caption">trying <i>le clocher penché</i> in québec city!</p>
+            <p className="caption">
+              trying <i>le clocher penché</i> in québec city!
+            </p>
           </div>
           <div className="right-box">
-            <p className="textbox">I study <b>systems design engineering</b> @ UWaterloo and I love creating cool things.</p>
+            <p className="textbox">
+              I study <b>systems design engineering</b> @ UWaterloo and I love
+              creating cool things.
+            </p>
             <br></br>
-            <p className="textbox">I’m currently developing <b>automation software</b> packages at Lumentum for telecommunications.</p>
+            <p className="textbox">
+              I’m currently developing <b>automation software</b> packages at
+              Lumentum for telecommunications.
+            </p>
             <br></br>
-            <p className="textbox">I’m also spearheading a <b>6-bar linkage</b> roof-tilt for Waterloo’s solar EV team, Midnight Sun.</p>
+            <p className="textbox">
+              I’m also spearheading a <b>6-bar linkage</b> roof-tilt for
+              Waterloo’s solar EV team, Midnight Sun.
+            </p>
             <br></br>
-            <p className="textbox">Outside of creating, I’m an avid soccer player, write rap verses, and a self-acclaimed food connoisseur!</p>
-            <br></br>
+            <p className="textbox">
+              Outside of creating, I’m an avid soccer player, write rap verses,
+              and a self-acclaimed food connoisseur!
+            </p>
           </div>
         </div>
-
       </main>
 
       <footer>
-        <Footer />
+        <div className="container">
+          <div>
+            <p><small>© 2025 Ian Xiong</small></p>
+          </div>
+          <div>
+            <h3>curious to see more?</h3>
+          </div>
+          <div>
+            <SocialLinks />
+          </div>
+        </div>
       </footer>
     </>
   );

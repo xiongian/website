@@ -49,6 +49,15 @@ body {
   min-height: 100vh;
 }
 
+h3 {
+  font-family: 'Gentium Plus';
+  font-size: 1.95em;
+  font-weight: 400;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  opacity: 0.75;
+}
+
 h2 {
   font-family: 'Gentium Plus';
   font-size: 2.88em;
