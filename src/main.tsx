@@ -19,11 +19,21 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+import './styles/globals.css'
+import './styles/header.css'
+import './styles/home.css'
+import './styles/sections.css'
 import App from './App.tsx'
+import { APP_CONFIG } from './config/appConfig'
+import { getRootElement } from './utils/domUtils'
 
 // Mount the React app into the #root element from index.html
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+createRoot(getRootElement()).render(
+  APP_CONFIG.strictMode ? (
+    <StrictMode>
+      <App />
+    </StrictMode>
+  ) : (
     <App />
-  </StrictMode>,
+  ),
 )

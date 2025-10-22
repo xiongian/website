@@ -2,8 +2,7 @@
   src/App.tsx
 
   Purpose:
-  - This is the main React component file for the site. It defines a small set of presentational
-    components (Button, Header, Footer) and a root App component that composes them.
+  - This is the main React component file for the site. It composes all the individual components.
 
   Teaching notes (how to read and change this file):
   - React components are functions that return JSX (looks like HTML but is JavaScript).
@@ -23,174 +22,28 @@
   - Keep JSX well-formed (one parent element or fragment per return).
 */
 
-import "./App.css";
-import ianPhoto from "./assets/ianphoto.png";
-import githubIcon from "./assets/github.png";
-import linkedinIcon from "./assets/linkedin.png";
-import twitterIcon from "./assets/twitter.png";
-import type { JSX, ReactElement } from "react";
-import { motion } from "framer-motion";
-import { useScrollPosition } from "./hooks/useScrollPosition";
-
-// Small presentational Button component
-// - Props: { button_name, onClick }
-// - How to change: accept an onClick prop or style props to make it interactive or themed.
-function Button({ button_name, onClick }: { button_name: string; onClick?: () => void }) {
-  function handleClick() {
-    if (onClick) {
-      onClick();
-    } else {
-      alert("You clicked on a button!");
-    }
-  }
-
-  return <button onClick={handleClick}>{button_name}</button>;
-}
-
-// Header composed from Button components with smooth scroll functionality
-function Header() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  return (
-    <div>
-      <Button button_name="mech" onClick={() => scrollToSection('mech-section')} />
-      <Button button_name="home" onClick={() => scrollToSection('home-section')} />
-      <Button button_name="software" onClick={() => scrollToSection('software-section')} />
-    </div>
-  );
-}
-
-function SocialLinkButton({ button_name, url, }: { button_name: string; url: string; }) {
-  return (
-    <a href={url}>
-      <img src={button_name}></img>
-    </a>
-  );
-}
-
-// Footer showing simple contact buttons and a copyright
-// - How to improve: make the social buttons links (<a href="..."><button/></a>) or extract to a SocialLinks component
-function SocialLinks() {
-  return (
-    <div>
-      <SocialLinkButton
-        button_name={githubIcon}
-        url="https://github.com/xiongian"
-      />
-      <SocialLinkButton
-        button_name={linkedinIcon}
-        url="https://www.linkedin.com/in/ian-xiong/"
-      />
-      <SocialLinkButton
-        button_name={twitterIcon}
-        url="https://x.com/ianxiong_"
-      />
-    </div>
-  );
-}
+import type { ReactElement } from "react";
+import { FloatingHeader } from "./components/FloatingHeader";
+import { HomeSection } from "./components/HomeSection";
+import { SoftwareSection } from "./components/SoftwareSection";
+import { MechanicalSection } from "./components/MechanicalSection";
+import { Footer } from "./components/Footer";
 
 // Root App component with floating header
 // - This composes Header, Footer and the main content.
 // - Note: avoid using a <body> tag inside components. The real <body> is in index.html. Use divs or semantic elements instead.
 function App(): ReactElement {
-  const scrollY = useScrollPosition();
-  const isFloating = scrollY > 0; // Trigger after passing the initial header area
-
   return (
     <>
-      {/* Floating Header with Framer Motion */}
-      <motion.div
-        className={`header-container ${isFloating ? 'floating' : 'fixed'}`}
-        animate={{
-          scale: isFloating ? 0.5 : 1,
-          opacity: isFloating ? 1 : 1,
-        }}
-        transition={{
-          scale: { duration: 0.8, type: 'spring', stiffness: 120, damping: 20, mass: 1, bounce: 0},
-          opacity: { duration: 0.3, type: 'spring' },
-        }}
-        style={{
-          position: isFloating ? 'sticky' : 'static' ,
-          top: isFloating ? '20px' : 'auto',
-          // left: isFloating ? '20%' : 'auto',
-          zIndex: 1000,
-          // width: isFloating ? '95%' : '100%',
-          // maxWidth: isFloating ? '1200px' : 'none',
-          // transformOrigin: '50% 50%',
-        }}
-      >
-        <div className="header-content">
-          <Header />
-          <SocialLinks />
-        </div>
-      </motion.div>
+      <FloatingHeader />
 
       <main>
-        {/* Main site content goes here. Replace this with routes or sections as the site grows. */}
-        <div id="home-section" className="container">
-          <div className="left-box">
-            <h2>hey, i'm</h2>
-            <h1>Ian Xiong!</h1>
-            <img src={ianPhoto} alt="Ian Xiong" />
-            <p className="caption">
-              trying <i>le clocher penché</i> in québec city!
-            </p>
-          </div>
-          <div className="right-box">
-            <p className="textbox">
-              I study <b>systems design engineering</b> @ UWaterloo and I love
-              creating cool things.
-            </p>
-            <br></br>
-            <p className="textbox">
-              I'm currently developing <b>automation software</b> packages at
-              Lumentum for telecommunications.
-            </p>
-            <br></br>
-            <p className="textbox">
-              I'm also spearheading a <b>6-bar linkage</b> roof-tilt for
-              Waterloo's solar EV team, Midnight Sun.
-            </p>
-            <br></br>
-            <p className="textbox">
-              Outside of creating, I'm an avid soccer player, write rap verses,
-              and a self-acclaimed food connoisseur!
-            </p>
-          </div>
-        </div>
-
-        {/* Software Section */}
-        <div id="software-section" className="section">
-          <div className="container">
-            <h2>Software Development</h2>
-            <p>Currently developing automation software packages at Lumentum for telecommunications.</p>
-          </div>
-        </div>
-
-        {/* Mechanical Section */}
-        <div id="mech-section" className="section">
-          <div className="container">
-            <h2>Mechanical Engineering</h2>
-            <p>Spearheading a 6-bar linkage roof-tilt for Waterloo's solar EV team, Midnight Sun.</p>
-          </div>
-        </div>
+        <HomeSection />
+        <SoftwareSection />
+        <MechanicalSection />
       </main>
 
-      <footer>
-        <div className="container">
-          <div>
-            <p><small>© 2025 Ian Xiong</small></p>
-          </div>
-          <div>
-            <h3>curious to see more?</h3>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

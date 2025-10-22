@@ -1,0 +1,79 @@
+/*
+  src/styles/header.css
+
+  Purpose:
+  - Header-specific styles including floating and fixed states
+*/
+
+.logo {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+/*Must have both logo and react classes and effect only happens on hover.*/
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Floating Header Styles */
+.header-container {
+  background-color: rgba(26, 16, 0, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 64px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(209, 159, 88, 0.2);
+  padding: 1em;
+  margin: 0 auto;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+.header-container.fixed {
+  background-color: #1A1000;
+  backdrop-filter: none;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  padding: 0px;
+  justify-content: center;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65vw;
+}
+
+.header-content > div:first-child {
+  justify-content: center;
+  display: flex;
+  gap: 1em;
+}
+
+.header-content > div:last-child {
+  justify-content: center;
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+}
+
+/* Fix anchor tag styling for social icons */
+.header-content a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.header-content a img {
+  display: block;
+  vertical-align: middle;
+}

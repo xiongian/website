@@ -51,7 +51,7 @@ body {
 
 h3 {
   font-family: 'Gentium Plus';
-  font-size: 1.95em;
+  font-size: 1.464em;
   font-weight: 400;
   margin-block-start: 0em;
   margin-block-end: 0em;
@@ -60,7 +60,7 @@ h3 {
 
 h2 {
   font-family: 'Gentium Plus';
-  font-size: 2.88em;
+  font-size: 2.16em;
   font-weight: 400;
   margin-block-start: 0em;
   margin-block-end: 0em;
@@ -69,7 +69,7 @@ h2 {
 
 h1 {
   font-family: 'Gentium Plus';
-  font-size: 3.84em;
+  font-size: 2.88em;
   line-height: 1;
   font-weight: 700;
   margin-block-start: 0em;
@@ -78,14 +78,14 @@ h1 {
 
 p {
   font-family: 'Lato';
-  font-size: 0.96em;
+  font-size: 0.72em;
   font-weight: 400;
   margin-block-start: 0em;
   margin-block-end: 0em;
 }
 
 img {
-  max-width: 465.6px;
+  max-width: 372.48px;
 }
 
 i {
@@ -118,8 +118,8 @@ button {
   font-family: 'Lato';
   border-radius: 2px;
   border: 1px solid transparent;
-  padding: 0.6em 1em;
-  font-size: 36px;
+  padding: 0.4em 1em;
+  font-size: 24px;
   font-weight: 100;
   background-color: transparent;
   cursor: pointer;
