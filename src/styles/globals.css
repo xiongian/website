@@ -6,7 +6,7 @@
 */
 
 #root {
-  max-width: 2880px;
+  max-width: 2000px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -21,7 +21,7 @@
 }
 
 .container div {
-  margin: 10px;
+  margin: 30px;
   padding: 1rem;
   font-size: 30px;
   align-items: center;

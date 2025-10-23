@@ -25,8 +25,7 @@
 import type { ReactElement } from "react";
 import { FloatingHeader } from "./components/FloatingHeader";
 import { HomeSection } from "./components/HomeSection";
-import { SoftwareSection } from "./components/SoftwareSection";
-import { MechanicalSection } from "./components/MechanicalSection";
+import { ProjectsSection } from "./components/ProjectsSection";
 import { Footer } from "./components/Footer";
 
 // Root App component with floating header
@@ -39,8 +38,7 @@ function App(): ReactElement {
 
       <main>
         <HomeSection />
-        <SoftwareSection />
-        <MechanicalSection />
+        <ProjectsSection />
       </main>
 
       <Footer />

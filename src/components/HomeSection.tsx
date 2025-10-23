@@ -10,7 +10,7 @@ import ianPhoto from "../assets/ianphoto.png";
 
 export function HomeSection(): JSX.Element {
   return (
-    <div id="home-section" className="container">
+    <div id="home" className="container">
       <div className="left-box">
         <h2>hey, i'm</h2>
         <h1>Ian Xiong!</h1>

@@ -1,0 +1,341 @@
+/*
+  src/styles/projects.css
+
+  Purpose:
+  - Styles for projects section, project cards, and project modal
+  - Maintains 345×306px aspect ratio for cards
+  - Tag styling with 2:1 aspect ratio (149px width for "mediapipe")
+*/
+
+/* ==================== Projects Section ==================== */
+
+#projects-section {
+  padding: 3rem 0;
+  min-height: 80vh;
+}
+
+.section-container {
+  width: 60vw;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.section-title {
+  font-family: 'Gentium Plus', serif;
+  font-size: 64px;
+  font-weight: 400;
+  text-align: left !important;
+  margin-bottom: 3rem;
+  opacity: 0.75;
+}
+
+/* Override any center alignment from sections.css */
+#projects-section .section-title {
+  text-align: left;
+}
+
+/* ==================== Projects Grid ==================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* ==================== Project Card ==================== */
+
+.project-card {
+  background-color: #d9d9d9;
+  border: 4px solid;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  /* Maintain 345×306px aspect ratio */
+  aspect-ratio: 345 / 306;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 12px;
+}
+
+.project-card:hover {
+  box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.3);
+  transform: translateY(-4px);
+}
+
+.project-card-image {
+  height:300px;
+  flex: 1;
+  overflow: hidden;
+  background-color: #d9d9d9;
+  border-radius: 0;
+  border: 2px solid #000000;
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.project-card-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-card-github {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.project-card-github:hover {
+  opacity: 0.7;
+}
+
+.project-card-github img {
+  height: 20px;
+  width: auto;
+}
+
+.project-card-description {
+  font-family: 'Lato', sans-serif;
+  font-size: 6px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
+  line-height: 1.4;
+  text-align: left;
+  /* Ensure 1-line only */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ==================== Project Tags ==================== */
+
+.project-card-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.project-tag {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #244A00;
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  /* 2:1 aspect ratio - adjust width to fit text like "mediapipe" in 149px */
+  min-width: 60px;
+  max-width: 149px;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 0;
+}
+
+.project-tag-overflow {
+  background-color: #244A00;
+  min-width: 40px;
+  max-width: 40px;
+  aspect-ratio: 1;
+  padding: 0;
+}
+
+/* ==================== Project Modal ==================== */
+
+.project-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.project-modal {
+  background-color: #d9d9d9;
+  border: 1px solid;
+  border-radius: 0;
+  width: 50vw;
+  max-height: 85vh;
+  overflow-y: auto;
+  cursor: default;
+  animation: scaleIn 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.project-modal-image {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.project-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-modal-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.project-modal-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: #000000;
+}
+
+.project-modal-github {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.project-modal-github:hover {
+  opacity: 0.7;
+}
+
+.project-modal-github img {
+  height: 28px;
+  width: auto;
+}
+
+.project-modal-brief {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.project-modal-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.project-modal-description {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-modal-description p {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==================== Responsive Adjustments ==================== */
+
+@media (max-width: 1400px) {
+  .projects-grid {
+    gap: 1.5rem;
+  }
+  
+  .project-modal {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .project-modal {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    width: 90vw;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .project-modal {
+    width: 90vw;
+  }
+}

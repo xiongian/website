@@ -10,16 +10,6 @@
   width: 1.5em;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-/*Must have both logo and react classes and effect only happens on hover.*/
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-/* Floating Header Styles */
 .header-container {
   background-color: rgba(26, 16, 0, 0.95);
   backdrop-filter: blur(10px);
@@ -47,7 +37,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 65vw;
+  width: 100%;
 }
 
 .header-content > div:first-child {
@@ -63,7 +53,6 @@
   padding: 1em;
 }
 
-/* Fix anchor tag styling for social icons */
 .header-content a {
   display: inline-flex;
   align-items: center;
@@ -71,9 +60,4 @@
   text-decoration: none;
   vertical-align: middle;
   line-height: 1;
-}
-
-.header-content a img {
-  display: block;
-  vertical-align: middle;
 }
