@@ -14,52 +14,55 @@
 
 import type { Project } from '../types/project';
 import fernandoImage from '../assets/fernando.png'; // Replace with actual project images
+import rooftiltImage from '../assets/rooftilt.png';
+import jigImage from '../assets/chassisjig.png';
+import kartImage from '../assets/mariokart.png';
 
 export const projects: Project[] = [
   {
     id: 'project-1',
     title: 'FERNANDO',
-    description: 'A brief one-line description of this project',
+    description: 'posture-regulating robot',
     fullDescription: 'This is the full expanded description that appears when the project card is clicked. You can write multiple sentences here explaining the project in detail, its purpose, technologies used, challenges overcome, and outcomes achieved.',
     image: fernandoImage, // Replace with your project image
-    githubUrl: 'https://github.com/xiongian/project-1',
-    tags: ['Mediapipe'],
+    githubUrl: 'https://github.com/enxilium/posture-checker-robot',
+    tags: ['mediapipe', 'opencv', 'arduino', 'python', 'next.js'],
     borderColor: '#244A00', // Green
   },
   {
     id: 'project-2',
-    title: 'Project Two',
-    description: 'Another brief description here',
+    title: 'ROOF TILT',
+    description: '6-bar linkage to optimize solar EV charging',
     fullDescription: 'Full description for project two goes here.',
-    image: fernandoImage, // Replace
+    image: rooftiltImage, // Replace
     githubUrl: 'https://github.com/xiongian/project-2',
-    tags: ['Python', 'Machine Learning'],
+    tags: ['solidworks', 'ansys fea', 'nodal diagrams'],
     borderColor: '#244A00', // Green
   },
   {
     id: 'project-3',
-    title: 'Project Three',
-    description: 'Third project description',
+    title: 'CHASSIS JIG',
+    description: 'custom welding jig',
     fullDescription: 'Full description for project three.',
-    image: fernandoImage, // Replace
+    image: jigImage, // Replace
     githubUrl: 'https://github.com/xiongian/project-3',
-    tags: ['Node.js', 'Express'],
+    tags: ['solidworks', 'laser-cutting', 'dfm', 'dfa'],
     borderColor: '#244A00', // Green
   },
   {
     id: 'project-4',
-    title: 'Project Four',
-    description: 'Fourth project description',
+    title: 'SPRINTR',
+    description: 'low-cost sprint timing system',
     fullDescription: 'Full description for project four.',
     image: fernandoImage,
     githubUrl: 'https://github.com/xiongian/project-4',
-    tags: ['React Native'],
+    tags: ['esp32', 'radio communication'],
     borderColor: '#244A00', // Green
   },
   {
     id: 'project-5',
-    title: 'Project Five',
-    description: 'Fifth project description',
+    title: 'CONNECT FOUR',
+    description: 'rebuilding a classic game',
     fullDescription: 'Full description for project five.',
     image: fernandoImage,
     githubUrl: 'https://github.com/xiongian/project-5',
@@ -68,10 +71,10 @@ export const projects: Project[] = [
   },
   {
     id: 'project-6',
-    title: 'Project Six',
-    description: 'Sixth project description',
+    title: 'PIPE FRAME KART',
+    description: 'rebuilding my favourite mario kart',
     fullDescription: 'Full description for project six.',
-    image: fernandoImage,
+    image: kartImage,
     githubUrl: 'https://github.com/xiongian/project-6',
     tags: ['Docker', 'Kubernetes'],
     borderColor: '#244A00', // Green

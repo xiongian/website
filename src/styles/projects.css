@@ -56,22 +56,22 @@
   aspect-ratio: 345 / 306;
   display: flex;
   flex-direction: column;
-  padding: 12px;
-  gap: 12px;
+  padding: 0;
+  gap: 0;
 }
 
 .project-card:hover {
-  box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.3);
   transform: translateY(-4px);
 }
 
 .project-card-image {
-  height:300px;
-  flex: 1;
+  width: 100%;
+  height: 78%;
   overflow: hidden;
   background-color: #d9d9d9;
   border-radius: 0;
-  border: 2px solid #000000;
+  border: none;
 }
 
 .project-card-image img {
@@ -82,16 +82,19 @@
 }
 
 .project-card-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.2rem;
+  padding: 0.5rem;
+  align-items: flex-start;
 }
 
 .project-card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem;
+  width: 100%;
 }
 
 .project-card-title {
@@ -100,9 +103,11 @@
   font-weight: 700;
   margin: 0;
   color: #000000;
+  flex: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: left;
 }
 
 .project-card-github {
@@ -117,43 +122,43 @@
 }
 
 .project-card-github img {
-  height: 20px;
+  height: 16px;
   width: auto;
 }
 
 .project-card-description {
   font-family: 'Lato', sans-serif;
-  font-size: 6px;
+  font-size: 12px !important;
   font-weight: 400;
   color: #000000;
-  margin: 0;
-  line-height: 1.4;
-  text-align: left;
-  /* Ensure 1-line only */
-  white-space: nowrap;
+  margin: 0 !important;
+  margin-bottom: 0.8rem !important;
+  line-height: 1.3;
+  text-align: left !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
+  max-width: none !important;
 }
 
 /* ==================== Project Tags ==================== */
 
 .project-card-tags {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.4rem;
   flex-wrap: nowrap;
   overflow: hidden;
+  margin-top: auto;
 }
 
 .project-tag {
   font-family: 'Lato', sans-serif;
-  font-size: 12px;
+  font-size: 8px;
   font-weight: 400;
   background-color: #244A00;
   color: #ffffff;
-  padding: 0.25rem 0.5rem;
-  /* 2:1 aspect ratio - adjust width to fit text like "mediapipe" in 149px */
-  min-width: 60px;
-  max-width: 149px;
+  padding: 0.2rem 0.4rem;
   height: auto;
   display: inline-flex;
   align-items: center;
@@ -166,10 +171,11 @@
 
 .project-tag-overflow {
   background-color: #244A00;
-  min-width: 40px;
-  max-width: 40px;
+  min-width: 24px;
+  max-width: 24px;
   aspect-ratio: 1;
   padding: 0;
+  font-size: 8px;
 }
 
 /* ==================== Project Modal ==================== */
