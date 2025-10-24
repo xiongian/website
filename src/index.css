@@ -45,6 +45,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
+  justify-content: center;
   place-items: top;
   min-width: 320px;
   min-height: 100vh;
@@ -91,20 +92,6 @@ img {
 
 i {
   font-style: italic;
-}
-
-footer {
-  position: static;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 20vh;
-  background-color: #244A00;
-  color: white;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 button {

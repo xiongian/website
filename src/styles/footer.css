@@ -1,0 +1,62 @@
+/*
+  src/styles/footer.css
+
+  Purpose:
+  - Footer component styles
+  - 30vh height footer with centered call-to-action and bottom copyright
+*/
+
+footer {
+  position: relative;
+  margin: 0 -2rem !important;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 30vh;
+  background-color: #244A00;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.footer-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5%;
+}
+
+.footer-link {
+  font-family: 'Gentium Plus', serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-link:hover {
+  transform: translateY(-4px);
+}
+
+.footer-highlight {
+  color: #FFC36E;
+}
+
+.footer-copyright {
+  padding-bottom: 1rem;
+}
+
+.footer-copyright p {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+}

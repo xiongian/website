@@ -18,9 +18,10 @@
   border: 1px solid rgba(209, 159, 88, 0.2);
   padding: 1em;
   margin: 0 auto;
-  min-height: 10vh;
+  min-height: 5vh;
   display: flex;
   align-items: center;
+  width: 65%;
 }
 
 .header-container.fixed {
@@ -37,7 +38,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 65vw;
 }
 
 .header-content > div:first-child {
