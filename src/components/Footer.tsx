@@ -11,7 +11,7 @@ export function Footer(): JSX.Element {
   return (
     <footer>
       <div className="footer-content">
-        <a href="mailto:contact@ianxiong.com" className="footer-link">
+        <a href="mailto:contact@ixiong@uwaterloo.ca" className="footer-link">
           curious to <span className="footer-highlight">see more</span>?
         </a>
       </div>

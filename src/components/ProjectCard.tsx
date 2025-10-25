@@ -19,7 +19,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, onClick }: ProjectCardProps): JSX.Element {
   // Calculate visible tags and overflow
-  const MAX_VISIBLE_TAGS = 5; // Adjust based on card width
+  const MAX_VISIBLE_TAGS = 4; // Adjust based on card width
   const visibleTags = project.tags.slice(0, MAX_VISIBLE_TAGS);
   const overflowCount = project.tags.length - MAX_VISIBLE_TAGS;
 
@@ -39,15 +39,17 @@ export function ProjectCard({ project, onClick }: ProjectCardProps): JSX.Element
         {/* Title and GitHub Icon */}
         <div className="project-card-header">
           <h3 className="project-card-title">{project.title}</h3>
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-card-github"
-            onClick={(e) => e.stopPropagation()} // Prevent card click when clicking GitHub
-          >
-            <img src={githubIcon} alt="GitHub" />
-          </a>
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-card-github"
+              onClick={(e) => e.stopPropagation()} // Prevent card click when clicking GitHub
+            >
+              <img src={githubIcon} alt="GitHub" />
+            </a>
+          )}
         </div>
 
         {/* Brief Description */}

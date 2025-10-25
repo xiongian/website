@@ -2,10 +2,10 @@
   src/components/ProjectModal.tsx
 
   Purpose:
-  - Expanded project modal (centered overlay)
-  - Shows full project details with description
-  - Click anywhere to close
-  - Fade-in animation
+  - Expanded project modal displaying full project details
+  - 40vw × 85vh modal with scrollable content
+  - Maintains same design as project cards
+  - Click outside to close with fade transition
 */
 
 import type { JSX } from 'react';
@@ -19,7 +19,7 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ project, onClose }: ProjectModalProps): JSX.Element | null {
-  // Close on Escape key
+  // Handle escape key and body scroll lock
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -27,7 +27,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps): JSX.Eleme
     
     if (project) {
       document.addEventListener('keydown', handleEscape);
-      // Prevent body scroll when modal is open
       document.body.style.overflow = 'hidden';
     }
     
@@ -44,16 +43,16 @@ export function ProjectModal({ project, onClose }: ProjectModalProps): JSX.Eleme
       <div
         className="project-modal"
         style={{ borderColor: project.borderColor }}
-        onClick={(e) => e.stopPropagation()} // Prevent close when clicking modal content
+        onClick={(e) => e.stopPropagation()}
       >
-        {/* Project Image */}
+        {/* Image Section - Maintains 345:306 aspect ratio */}
         <div className="project-modal-image">
           <img src={project.image} alt={project.title} />
         </div>
 
-        {/* Project Content */}
+        {/* Content Section - Same styling as card */}
         <div className="project-modal-content">
-          {/* Title and GitHub Icon */}
+          {/* Title + GitHub Icon Row */}
           <div className="project-modal-header">
             <h3 className="project-modal-title">{project.title}</h3>
             <a
@@ -61,15 +60,16 @@ export function ProjectModal({ project, onClose }: ProjectModalProps): JSX.Eleme
               target="_blank"
               rel="noopener noreferrer"
               className="project-modal-github"
+              onClick={(e) => e.stopPropagation()}
             >
               <img src={githubIcon} alt="GitHub" />
             </a>
           </div>
 
           {/* Brief Description */}
-          <p className="project-modal-brief">{project.description}</p>
+          <p className="project-modal-description">{project.description}</p>
 
-          {/* Tags */}
+          {/* Tags Row */}
           <div className="project-modal-tags">
             {project.tags.map((tag, index) => (
               <span key={index} className="project-tag">
@@ -78,8 +78,8 @@ export function ProjectModal({ project, onClose }: ProjectModalProps): JSX.Eleme
             ))}
           </div>
 
-          {/* Full Description */}
-          <div className="project-modal-description">
+          {/* Extended Description */}
+          <div className="project-modal-extended">
             <p>{project.fullDescription}</p>
           </div>
         </div>
