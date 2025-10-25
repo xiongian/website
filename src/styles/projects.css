@@ -154,7 +154,7 @@
 
 .project-tag {
   font-family: 'Lato', sans-serif;
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 400;
   background-color: #244A00;
   color: #ffffff;
@@ -175,7 +175,7 @@
   max-width: 24px;
   aspect-ratio: 1;
   padding: 0;
-  font-size: 10px;
+  font-size: 8px;
 }
 
 /* ==================== Responsive Adjustments ==================== */

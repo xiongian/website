@@ -19,7 +19,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, onClick }: ProjectCardProps): JSX.Element {
   // Calculate visible tags and overflow
-  const MAX_VISIBLE_TAGS = 4; // Adjust based on card width
+  const MAX_VISIBLE_TAGS = 5; // Adjust based on card width
   const visibleTags = project.tags.slice(0, MAX_VISIBLE_TAGS);
   const overflowCount = project.tags.length - MAX_VISIBLE_TAGS;
 

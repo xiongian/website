@@ -35,11 +35,11 @@
 
 a {
   font-weight: 200;
-  color: #646cff;
-  text-decoration: inherit;
+  color: inherit;
+  text-decoration: none;
 }
 a:hover {
-  color: #535bf2;
+  opacity: 0.8;
 }
 
 body {

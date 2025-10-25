@@ -37,7 +37,7 @@ export function HomeSection(): JSX.Element {
         <br></br>
         <p className="textbox">
           Outside of creating, I'm an avid soccer player, write rap verses,
-          and a self-acclaimed food connoisseur!
+          and a self-acclaimed <a href="https://beliapp.co/app/ianxiong" target="_blank" rel="noopener noreferrer">food connoisseur</a>!
         </p>
       </div>
     </div>

@@ -18,7 +18,7 @@ interface SocialLinkButtonProps {
 
 function SocialLinkButton({ button_name, url }: SocialLinkButtonProps): JSX.Element {
   return (
-    <a href={url}>
+    <a href={url} target="_blank" rel="noopener noreferrer">
       <img className="logo" src={button_name} alt="Social link"></img>
     </a>
   );

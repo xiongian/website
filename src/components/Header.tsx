@@ -19,8 +19,7 @@ export function Header(): JSX.Element {
   return (
     <div>
       <Button button_name="home" onClick={() => scrollToSection('home')} />
-      <Button button_name="projects" onClick={() => scrollToSection('projects-section')} />        
-      <Button button_name="resume" onClick={() => scrollToSection('mech-section')} />
+      <Button button_name="projects" onClick={() => scrollToSection('projects-section')} /> 
     </div>
   );
 }
