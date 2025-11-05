@@ -27,7 +27,7 @@ export const projects: Project[] = [
     description: 'a posture-regulating robot',
     fullDescription: '',
     image: fernandoImage,
-    githubUrl: 'https://github.com/enxilium/posture-checker-robot',
+    githubUrl: 'https://github.com/xiongian/posture-checker-robot',
     tags: ['mediapipe', 'opencv', 'arduino', 'next.js'],
     borderColor: '#244A00',
   },
