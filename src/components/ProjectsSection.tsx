@@ -18,7 +18,6 @@ export function ProjectsSection(): JSX.Element {
             <ProjectCard
               key={project.id}
               project={project}
-              onClick={() => {}} // No-op for now
             />
           ))}
         </div>
