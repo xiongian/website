@@ -27,6 +27,7 @@ import { FloatingHeader } from "./components/FloatingHeader";
 import { HomeSection } from "./components/HomeSection";
 import { ProjectsSection } from "./components/ProjectsSection";
 import { Footer } from "./components/Footer";
+import { CustomScrollbar } from "./components/CustomScrollbar";
 
 // Root App component with floating header
 // - This composes Header, Footer and the main content.
@@ -34,6 +35,7 @@ import { Footer } from "./components/Footer";
 function App(): ReactElement {
   return (
     <>
+      <CustomScrollbar />
       <FloatingHeader />
 
       <main>
