@@ -1,1 +1,1 @@
-A personal website built with Vite and React display my projects.
+My personal website built with Vite and React to display my projects.
