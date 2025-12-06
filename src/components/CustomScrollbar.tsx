@@ -53,6 +53,7 @@ export function CustomScrollbar(): ReactElement {
     <>
       {/* Invisible track */}
       <div
+        className="custom-scrollbar"
         style={{
           position: "fixed",
           right: 0,

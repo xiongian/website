@@ -62,3 +62,9 @@
   vertical-align: middle;
   line-height: 1;
 }
+
+@media (max-width: 644px) {
+  .header-container {
+    display: none;
+  }
+}

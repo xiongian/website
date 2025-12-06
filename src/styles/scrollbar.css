@@ -28,3 +28,13 @@ html {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.custom-scrollbar {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .custom-scrollbar {
+    display: none;
+  }
+}
