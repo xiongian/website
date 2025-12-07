@@ -5,26 +5,45 @@
   - Home section specific styles
 */
 
-.left-box {
-  margin: 120px;
-  text-align: left;
-  max-width: 30vw;
+.home-hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
 }
 
-.right-box {
-  margin: 120px;
+.hero-persona {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 320px;
   text-align: left;
-  background-color: #D19F58;
-  width: 375px;
-  height: 420px;
-  filter: drop-shadow(16px 16px 2px #244A00);
+  align-items: flex-start;
+  flex-direction: column;
 }
+
+.hero-description {
+  display: flex;
+  flex: 1 1 0;
+  justify-content: space-between;
+  gap: 5%;
+  min-width: 375px;
+  flex-direction: column;
+  background-color: var(--bg-dark);
+  border: 1.5px solid var(--y-border);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 24px;
+  text-align: left;
+}
+
 
 .caption {
   padding: 10px 0px;
-  color: #D19F58;
+  color: var(--text-yellow);
+  text-align: left
 }
 
 .textbox {
-  color: #1A1000;
+  color: var(--text);
 }

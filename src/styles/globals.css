@@ -6,11 +6,29 @@
 */
 
 #root {
+  font-family: system-ui, serif, Gentium Plus, Lato, sans-serif;
+  line-height: 1.15;
+  font-weight: 400;
+  font-size: 16;
+  color-scheme: light dark;
+  background-color: #1A1000;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 2rem 0 0 0;
   text-align: center;
   width: 100%;
   min-height: 100vh;
+  --bg-dark: oklch(0.1817 0.0374 82.46 / 95%); 
+  --bg-light: oklch(0.8383 0.0 82.46 / 95%);
+  --text-dark: oklch(0 0 0);;
+  --text: oklch(1 0 0 / 87%);
+  --text-yellow: oklch(0.7349 0.1068 74.45);
+  --text-muted: oklch(1 0 0 / 70%);;
+  --y-border: oklch(0.7349 0.1068 74.45 / 20%);
+  --g-border: oklch(0.3662 0.1061 134.56);
 }
 
 .container {
@@ -18,7 +36,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 80vh;
 }
 
 .container div {
@@ -33,11 +50,6 @@
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
-}
-
-/* Stack primary sections so each can own its row */
 .app-layout {
   display: flex;
   flex-direction: column;

@@ -16,22 +16,6 @@
   3) Add responsive rules for smaller screens.
 */
 
-:root {
-  font-family: system-ui, serif, Gentium Plus, Avenir, Lato, Helvetica, Arial, sans-serif;
-  line-height: 1.15;
-  font-weight: 400;
-  font-size: 16;
-
-  /* color-scheme affects form controls and built-in UI in modern browsers */
-  color-scheme: light dark;
-  color: #ffffffde;
-  background-color: #1A1000;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 a {
   font-weight: 200;
@@ -66,7 +50,7 @@ h2 {
   font-weight: 400;
   margin-block-start: 0em;
   margin-block-end: 0em;
-  opacity: 0.75;
+  color: var(--text-muted, rgba(255, 255, 255, 0.7));
 }
 
 h1 {
@@ -76,6 +60,7 @@ h1 {
   font-weight: 700;
   margin-block-start: 0em;
   margin-block-end: 0.2em;
+  color: var(--text, rgba(255, 255, 255, 0.87));
 }
 
 p {
@@ -114,7 +99,7 @@ button {
   color: #D19F58;
 }
 button:hover {
-  border-color: #244A00;
+  border-color: var(--g-border);
 }
 
 button:focus,

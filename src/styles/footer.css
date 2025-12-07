@@ -13,7 +13,7 @@ footer {
   bottom: 0;
   width: 100vw;
   height: 30vh;
-  background-color: #244A00;
+  background-color: var(--g-border);
   color: white;
   text-align: center;
   display: flex;

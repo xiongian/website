@@ -1,16 +1,4 @@
-/*
-  src/data/projects.ts
 
-  Purpose:
-  - Project data array
-  - POPULATE THIS FILE with your actual project data
-  
-  Instructions:
-  - Replace placeholder data with real project information
-  - Update image paths to point to your project images in src/assets/
-  - Customize borderColor per project ('#244A00' for green, '#FFC36E' for yellow, etc.)
-  - Add as many tags as needed - overflow will be handled automatically
-*/
 
 import type { Project } from '../types/project';
 import fernandoImage from '../assets/fernando.png'; // Replace with actual project images
@@ -29,7 +17,7 @@ export const projects: Project[] = [
     image: fernandoImage,
     githubUrl: 'https://github.com/xiongian/posture-checker-robot',
     tags: ['mediapipe', 'opencv', 'arduino', 'next.js'],
-    borderColor: '#244A00',
+    borderColor: 'var(--g-border)',
   },
   {
     id: 'project-5',
@@ -39,7 +27,7 @@ export const projects: Project[] = [
     image: connectfourImage,
     githubUrl: 'https://github.com/xiongian/connect-four',
     tags: ['java', 'awt swing'],
-    borderColor: '#244A00',
+    borderColor: 'var(--g-border)',
   },
   {
     id: 'project-4',
@@ -49,7 +37,7 @@ export const projects: Project[] = [
     image: kartImage,
     githubUrl: 'https://github.com/xiongian/marioKart',
     tags: ['3d-printing', 'solidworks'],
-    borderColor: '#244A00',
+    borderColor: 'var(--g-border)',
   },
   {
     id: 'project-2',
@@ -59,7 +47,7 @@ export const projects: Project[] = [
     image: rooftiltImage, 
     githubUrl: '',
     tags: ['solidworks', 'ansys fea', 'nodal diagrams'],
-    borderColor: '#244A00',
+    borderColor: 'var(--g-border)',
   },
   {
     id: 'project-3',
@@ -69,7 +57,7 @@ export const projects: Project[] = [
     image: jigImage,
     githubUrl: '',
     tags: ['solidworks', 'laser-cutting', 'dfm', 'dfa'],
-    borderColor: '#244A00',
+    borderColor: 'var(--g-border)',
   },
   {
     id: 'project-6',
@@ -79,6 +67,6 @@ export const projects: Project[] = [
     image: sprintrImage,
     githubUrl: '',
     tags: ['esp32', 'radio communication', '3d-printing'],
-    borderColor: '#244A00', // Green
+    borderColor: 'var(--g-border)', // Green
   }
 ];
