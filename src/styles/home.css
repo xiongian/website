@@ -29,6 +29,10 @@
   flex-direction: column;
 }
 
+.hero-persona img {
+  max-width: 372.48px;
+}
+
 .hero-description {
   display: flex;
   flex: 0 1 0;
