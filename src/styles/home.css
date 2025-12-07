@@ -15,8 +15,8 @@
 
 .hero-persona {
   display: flex;
-  flex: 1 1 0;
-  min-width: 320px;
+  flex: 0 1 0;
+  min-width: 24rem;
   text-align: left;
   align-items: flex-start;
   flex-direction: column;
@@ -24,7 +24,7 @@
 
 .hero-description {
   display: flex;
-  flex: 1 1 0;
+  flex: 0 1 0;
   justify-content: space-between;
   gap: 5%;
   min-width: 375px;
