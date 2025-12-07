@@ -1,30 +1,65 @@
-/*
-  src/styles/home.css
 
-  Purpose:
-  - Home section specific styles
-*/
-
-.left-box {
-  margin: 120px;
-  text-align: left;
-  max-width: 30vw;
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
 }
 
-.right-box {
-  margin: 120px;
-  text-align: left;
-  background-color: #D19F58;
-  width: 375px;
-  height: 420px;
-  filter: drop-shadow(16px 16px 2px #244A00);
+.home-hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
 }
+
+.hero-persona {
+  display: flex;
+  flex: 0 1 0;
+  min-width: 23rem;
+  text-align: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.hero-persona img {
+  width: 100%;
+  height: auto;
+  max-width: 372.48px;
+}
+
+.hero-description {
+  display: flex;
+  flex: 0 1 0;
+  justify-content: space-between;
+  gap: 5%;
+  min-width: 20rem;
+  min-height: 26rem;
+  flex-direction: column;
+  background-color: var(--bg-dark);
+  border: 1.5px solid var(--y-border);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 24px;
+  text-align: left;
+}
+
 
 .caption {
   padding: 10px 0px;
-  color: #D19F58;
+  color: var(--text-yellow);
+  text-align: center
 }
 
 .textbox {
-  color: #1A1000;
+  color: var(--text);
 }
+
+@media (max-width: 476px) {
+  .hero-persona,
+  .hero-description {
+    min-width: 17rem;
+  }
+}
+

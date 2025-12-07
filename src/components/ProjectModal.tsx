@@ -1,13 +1,3 @@
-/*
-  src/components/ProjectModal.tsx
-
-  Purpose:
-  - Expanded project modal displaying full project details
-  - 40vw × 85vh modal with scrollable content
-  - Maintains same design as project cards
-  - Click outside to close with fade transition
-*/
-
 import type { JSX } from 'react';
 import { useEffect } from 'react';
 import type { Project } from '../types/project';

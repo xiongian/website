@@ -1,17 +1,10 @@
-/*
-  src/components/Footer.tsx
-
-  Purpose:
-  - Footer component with copyright and call-to-action
-*/
-
 import type { JSX } from "react";
 
 export function Footer(): JSX.Element {
   return (
     <footer>
       <div className="footer-content">
-        <a href="mailto:contact@ixiong@uwaterloo.ca" className="footer-link">
+        <a href="mailto:ixiong@uwaterloo.ca" className="footer-link">
           curious to <span className="footer-highlight">see more</span>?
         </a>
       </div>

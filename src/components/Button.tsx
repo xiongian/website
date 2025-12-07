@@ -1,12 +1,3 @@
-/*
-  src/components/Button.tsx
-
-  Purpose:
-  - Small presentational Button component
-  - Props: { button_name, onClick }
-  - How to change: accept an onClick prop or style props to make it interactive or themed.
-*/
-
 import type { JSX } from "react";
 
 interface ButtonProps {

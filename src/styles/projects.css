@@ -1,25 +1,3 @@
-/*
-  src/styles/projects.css
-
-  Purpose:
-  - Styles for projects section, project cards, and project modal
-  - Maintains 345×306px aspect ratio for cards
-  - Tag styling with 2:1 aspect ratio (149px width for "mediapipe")
-*/
-
-/* ==================== Projects Section ==================== */
-
-#projects-section {
-  padding: 3rem 0;
-  min-height: 80vh;
-}
-
-.section-container {
-  width: 60vw;
-  margin: 0 auto;
-  padding: 2rem 0;
-}
-
 .section-title {
   font-family: 'Gentium Plus', serif;
   font-size: 64px;
@@ -29,7 +7,6 @@
   opacity: 0.75;
 }
 
-/* Override any center alignment from sections.css */
 #projects-section .section-title {
   text-align: left;
 }
@@ -38,16 +15,17 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 1.5rem;
-  width: 100%;
+  width: min(80vw, 1100px);
+  margin: 2rem;
 }
 
 /* ==================== Project Card ==================== */
 
 .project-card {
-  background-color: #d9d9d9;
-  border: 4px solid;
+  background-color: var(--bg-light);
+  border: 0.25rem solid;
   border-radius: 0;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -56,8 +34,7 @@
   aspect-ratio: 345 / 306;
   display: flex;
   flex-direction: column;
-  padding: 0;
-  gap: 0;
+  gap: 0rem;
 }
 
 .project-card:hover {
@@ -99,10 +76,10 @@
 
 .project-card-title {
   font-family: 'Lato', sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   margin: 0;
-  color: #000000;
+  color: var(--text-dark);
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
@@ -117,7 +94,7 @@
 }
 
 .project-card-github img {
-  height: 16px;
+  height: 1rem;
   width: auto;
 }
 
@@ -125,11 +102,12 @@
   font-family: 'Lato', sans-serif;
   font-size: 12px !important;
   font-weight: 400;
-  color: #000000;
+  color: var(--text-dark);
   margin: 0 !important;
   margin-bottom: 0.8rem !important;
   line-height: 1.3;
   text-align: left !important;
+  line-clamp: 2;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -151,7 +129,7 @@
   font-family: 'Lato', sans-serif;
   font-size: 10px;
   font-weight: 400;
-  background-color: #244A00;
+  background-color: var(--g-border);
   color: #ffffff;
   padding: 0.2rem 0.4rem;
   height: auto;
@@ -165,7 +143,7 @@
 }
 
 .project-tag-overflow {
-  background-color: #244A00;
+  background-color: var(--g-border);
   min-width: 24px;
   max-width: 24px;
   aspect-ratio: 1;
@@ -188,12 +166,9 @@
 }
 
 @media (max-width: 768px) {
-  .section-container {
-    width: 90vw;
-  }
-  
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+    width: 90vw;
   }
 }

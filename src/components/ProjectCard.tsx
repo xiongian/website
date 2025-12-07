@@ -1,13 +1,3 @@
-/*
-  src/components/ProjectCard.tsx
-
-  Purpose:
-  - Individual project card component (345×306px aspect ratio)
-  - Displays project image, title, description, and tags
-  - Handles hover glow effect
-  - Clickable to open expanded modal
-*/
-
 import type { JSX } from 'react';
 import type { Project } from '../types/project';
 import githubIcon from '../assets/github.png';

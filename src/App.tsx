@@ -36,14 +36,12 @@ function App(): ReactElement {
   return (
     <>
       <CustomScrollbar />
-      <FloatingHeader />
-
-      <main>
+      <div className="app-layout">
+        <FloatingHeader />
         <HomeSection />
         <ProjectsSection />
-      </main>
-
-      <Footer />
+        <Footer />
+      </div>
     </>
   );
 }
