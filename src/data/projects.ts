@@ -1,5 +1,3 @@
-
-
 import type { Project } from '../types/project';
 import fernandoImage from '../assets/fernando.png'; // Replace with actual project images
 import rooftiltImage from '../assets/rooftilt.png';

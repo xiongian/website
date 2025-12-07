@@ -1,11 +1,3 @@
-/*
-  src/styles/footer.css
-
-  Purpose:
-  - Footer component styles
-  - 30vh height footer with centered call-to-action and bottom copyright
-*/
-
 footer {
   position: relative;
   margin: 0 -2rem !important;

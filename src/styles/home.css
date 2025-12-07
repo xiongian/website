@@ -1,9 +1,3 @@
-/*
-  src/styles/home.css
-
-  Purpose:
-  - Home section specific styles
-*/
 
 .home-section {
   display: flex;
@@ -23,13 +17,15 @@
 .hero-persona {
   display: flex;
   flex: 0 1 0;
-  min-width: 24rem;
-  text-align: left;
+  min-width: 23rem;
+  text-align: center;
   align-items: flex-start;
   flex-direction: column;
 }
 
 .hero-persona img {
+  width: 100%;
+  height: auto;
   max-width: 372.48px;
 }
 
@@ -38,8 +34,8 @@
   flex: 0 1 0;
   justify-content: space-between;
   gap: 5%;
-  min-width: 375px;
-  min-height: 375px;
+  min-width: 20rem;
+  min-height: 26rem;
   flex-direction: column;
   background-color: var(--bg-dark);
   border: 1.5px solid var(--y-border);
@@ -53,9 +49,17 @@
 .caption {
   padding: 10px 0px;
   color: var(--text-yellow);
-  text-align: left
+  text-align: center
 }
 
 .textbox {
   color: var(--text);
 }
+
+@media (max-width: 476px) {
+  .hero-persona,
+  .hero-description {
+    min-width: 17rem;
+  }
+}
+
