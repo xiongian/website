@@ -6,7 +6,7 @@
 .header-container {
   background-color: rgba(26, 16, 0, 0.95);
   backdrop-filter: blur(10px);
-  border-radius: 64px;
+  border-radius: 3rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(209, 159, 88, 0.2);
   padding: 1em;
@@ -38,7 +38,7 @@
   justify-content: center;
   display: flex;
   gap: 1em;
-  color: var(--text-yellow, #D19F58);
+  color: var(--text-yellow);
 }
 
 .header-content > div:last-child {
@@ -58,7 +58,10 @@
 }
 
 @media (max-width: 644px) {
-  .header-container {
+  .header-content > div:first-child  {
     display: none;
+  }
+  .header-content {
+    justify-content: center;
   }
 }
