@@ -45,7 +45,7 @@
   justify-content: center;
   display: flex;
   gap: 1em;
-  color: var(--text-yellow);
+  color: var(--text-yellow, #D19F58);
 }
 
 .header-content > div:last-child {

@@ -1,25 +1,3 @@
-/*
-  src/styles/projects.css
-
-  Purpose:
-  - Styles for projects section, project cards, and project modal
-  - Maintains 345×306px aspect ratio for cards
-  - Tag styling with 2:1 aspect ratio (149px width for "mediapipe")
-*/
-
-/* ==================== Projects Section ==================== */
-
-#projects-section {
-  padding: 3rem 0;
-  min-height: 80vh;
-}
-
-.section-container {
-  width: 60vw;
-  margin: 0 auto;
-  padding: 2rem 0;
-}
-
 .section-title {
   font-family: 'Gentium Plus', serif;
   font-size: 64px;
@@ -29,7 +7,6 @@
   opacity: 0.75;
 }
 
-/* Override any center alignment from sections.css */
 #projects-section .section-title {
   text-align: left;
 }
@@ -38,16 +15,17 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 1.5rem;
-  width: 100%;
+  width: min(90vw, 1100px);
+  margin: 2rem auto;
 }
 
 /* ==================== Project Card ==================== */
 
 .project-card {
   background-color: var(--bg-light);
-  border: 4px solid;
+  border: 0.25rem solid;
   border-radius: 0;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -56,8 +34,7 @@
   aspect-ratio: 345 / 306;
   display: flex;
   flex-direction: column;
-  padding: 0;
-  gap: 0;
+  gap: 0rem;
 }
 
 .project-card:hover {
@@ -130,6 +107,7 @@
   margin-bottom: 0.8rem !important;
   line-height: 1.3;
   text-align: left !important;
+  line-clamp: 2;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -188,12 +166,9 @@
 }
 
 @media (max-width: 768px) {
-  .section-container {
-    width: 90vw;
-  }
-  
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+    width: 90vw;
   }
 }

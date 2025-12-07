@@ -58,7 +58,7 @@ export function CustomScrollbar(): ReactElement {
           position: "fixed",
           right: 0,
           top: 0,
-          width: "12px",
+          width: "24px",
           height: "100vh",
           backgroundColor: "transparent",
           zIndex: 9999,
@@ -71,7 +71,7 @@ export function CustomScrollbar(): ReactElement {
             position: "absolute",
             right: 0,
             top: 0,
-            width: "12px",
+            width: "0.75rem",
             height: `${thumbHeight}px`,
             backgroundColor: "#D19F58",
             transition: "none", // Smooth scrolling without CSS transition

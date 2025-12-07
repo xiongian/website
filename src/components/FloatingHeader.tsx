@@ -23,7 +23,7 @@ export function FloatingHeader(): JSX.Element {
         opacity: isFloating ? 1 : 1,
       }}
       transition={{
-        scale: { duration: 0.8, type: 'spring', stiffness: 120, damping: 20, mass: 1, bounce: 0},
+        scale: { duration: 0.5, type: 'spring', stiffness: 120, damping: 20, mass: 1, bounce: 0},
         opacity: { duration: 0.3, type: 'spring' },
       }}
       style={{
