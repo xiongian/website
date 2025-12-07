@@ -1,10 +1,3 @@
-/*
-  src/components/FloatingHeader.tsx
-
-  Purpose:
-  - Floating header with Framer Motion animations
-*/
-
 import type { JSX } from "react";
 import { motion } from "framer-motion";
 import { useScrollPosition } from "../hooks/useScrollPosition";

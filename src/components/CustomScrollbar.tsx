@@ -1,18 +1,3 @@
-/*
-  src/components/CustomScrollbar.tsx
-
-  Purpose:
-  - Custom scrollbar with a growing thumb that increases in height as you scroll down.
-  - The thumb starts at 0 height at the top and grows to full viewport height at the bottom.
-
-  How it works:
-  - Hides the browser's native scrollbar
-  - Renders a transparent track fixed to the right edge
-  - Renders a thumb that grows based on scroll progress (0 at top → 1 at bottom)
-  - thumbHeight = scrollProgress * viewportHeight
-  - thumbTop = scrollProgress * (trackHeight - thumbHeight)
-*/
-
 import { useEffect, useState } from "react";
 import type { ReactElement } from "react";
 

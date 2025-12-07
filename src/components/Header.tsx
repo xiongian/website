@@ -1,10 +1,3 @@
-/*
-  src/components/Header.tsx
-
-  Purpose:
-  - Header composed from Button components with smooth scroll functionality
-*/
-
 import type { JSX } from "react";
 import { Button } from "./Button";
 

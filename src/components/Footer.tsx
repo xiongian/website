@@ -1,10 +1,3 @@
-/*
-  src/components/Footer.tsx
-
-  Purpose:
-  - Footer component with copyright and call-to-action
-*/
-
 import type { JSX } from "react";
 
 export function Footer(): JSX.Element {

@@ -1,11 +1,3 @@
-/*
-  src/components/SocialLinks.tsx
-
-  Purpose:
-  - Footer showing simple contact buttons and a copyright
-  - How to improve: make the social buttons links (<a href="..."><button/></a>) or extract to a SocialLinks component
-*/
-
 import type { JSX } from "react";
 import githubIcon from "../assets/github.png";
 import linkedinIcon from "../assets/linkedin.png";

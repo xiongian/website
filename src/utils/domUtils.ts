@@ -1,10 +1,3 @@
-/*
-  src/utils/domUtils.ts
-
-  Purpose:
-  - DOM utility functions for the application
-*/
-
 export function getRootElement(): HTMLElement {
   const rootElement = document.getElementById('root');
   if (!rootElement) {

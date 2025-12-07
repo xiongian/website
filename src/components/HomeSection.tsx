@@ -1,10 +1,3 @@
-/*
-  src/components/HomeSection.tsx
-
-  Purpose:
-  - Home section with personal introduction and photo
-*/
-
 import type { JSX } from "react";
 import ianPhoto from "../assets/ianphoto.png";
 
