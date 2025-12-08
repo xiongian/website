@@ -132,7 +132,7 @@ button {
   color: #D19F58;
 }
 button:hover {
-  border-color: var(--g-border);
+  opacity: 0.8;
 }
 
 button:focus,
